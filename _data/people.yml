@@ -1,0 +1,24 @@
+- name: Wai Tong
+  avatar: "/assets/images/people/wai_tong.jpg"
+  personal_url: "https://wtong2017.github.io/"
+  position: "Assistant Professor"
+  alumni: false
+- name: Bhasura Gunawardhana
+  avatar: "/assets/images/people/bhasura_gunawardhana.jpg"
+  position: "Research Assistant"
+  personal_url: "https://www.linkedin.com/in/bhasura-gunawardhana/"
+  alumni: false
+- name: Danxuan Liang
+  avatar: "/assets/images/people/danxuan_liang.jpg"
+  position: "Intern (Remote)"
+  personal_url: "https://oocliooo.notion.site/Clio-s-Webpage-39a50734d5f845e99948f28699ff4ff3"
+  alumni: false
+- name: Ke Zhou
+  avatar: "/assets/images/people/ke_zhou.jpg"
+  position: "Intern (Remote)"
+  personal_url: "https://kezhou1210.github.io/"
+  alumni: false
+- name: Yilin Wang
+  avatar: "/assets/images/bio-photo.jpg"
+  position: "Intern (Remote)"
+  alumni: false

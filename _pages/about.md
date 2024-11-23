@@ -2,7 +2,17 @@
 permalink: /about/
 title: "About"
 ---
+About the **Visualization, Virtual reality, Augmented reality and Interaction (VVAI) Lab**
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+## Mission
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+At the VVAI Lab, we are passionate about advancing the frontiers of **visualization**, **AR/VR technology**, and **human-computer interaction**. Our mission is to explore and develop cutting-edge interaction techniques and immersive technologies that empower individuals and teams to engage in more efficient and effective visual exploration and analytics.
+
+## How to pronounce?
+
+The first two letters of the lab name, "VV", can be viewed as "W".
+So VVAI can be pronounced as "WAI" (pronounced as "why") Lab.
+
+## History
+
+The VVAI Lab was founded by [Wai Tong](https://wtong2017.github.io/) in 2024 at the [College of Performance, Visualization and Fine Arts](https://pvfa.tamu.edu/) at [Texas A&M University](https://www.tamu.edu/).

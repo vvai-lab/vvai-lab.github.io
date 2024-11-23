@@ -1,7 +1,42 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
+layout: splash
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  actions:
+    - label: "About us"
+      url: "/about/"
+excerpt: "**Visualization, Virtual Reality, Augmented Reality, and Interaction (VVAI) Lab** focuses on the research and development of AR/VR technology and interaction techniques for more efficient and effective visual exploration and analytics."
+research_areas:
+  - title: "Visualization"
+    excerpt: "Visualization is the graphical representation of information and data."
+  - title: "AR/VR"
+    excerpt: "Augmented Reality (AR) and Virtual Reality (VR) shape the future of how we interact with the digital world."
+  - title: "Interaction"
+    excerpt: "Interaction is a way of communication with not only a computer, but also data."
 ---
+
+{% include feature_row id="research_areas" %}
+
+<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1em;">
+  <div>
+    <h2>Recent Publications</h2>
+    <div class="entries-list">
+      {% for post in site.publications %} 
+        {% include archive-single.html type=list %}
+      {% endfor %}
+    </div>
+  </div>
+  <div>
+    <h2 id="news-title">News</h2>
+    <div class="entries-list">
+      {% for post in site.posts %} 
+        {% include archive-single.html type=list %}
+      {% endfor %}
+    </div>
+    <a href="#news-title" class="back-to-top"
+      >{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }}
+      &uarr;</a
+    >
+  </div>
+</div>
