@@ -1,0 +1,56 @@
+---
+title: "Publications"
+permalink: /publications/
+---
+
+We published research in various formats, including posters, conferences, and
+journals, focusing on top venues in Visualization, VR/AR, and HCI.
+
+{% assign pubsByYear = site.publications | where_exp: "item", "item.hidden !=
+true" | group_by_exp: 'post', 'post.year' %} {% for year in pubsByYear %}
+<section id="{{ year.name }}" class="taxonomy__section">
+  <h2 class="archive__subtitle">{{ year.name }}</h2>
+  <div>
+    {% assign sortedPubs = year.items | sort: 'date' | reverse %}
+    {% for pub in sortedPubs %}
+    <div
+      style="
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 1em;
+        padding-bottom: 1em;
+      "
+    >
+      <div style="height: 5em">
+        <img
+          src="/assets/images/publications/{{ pub.imgSrc }}"
+          alt="{{ pub.paperTitle }}"
+          style="object-fit: cover; height: 100%; min-width: 100%"
+        />
+      </div>
+      <div style="font-size: 0.8rem">
+        <div>
+          <a href="{{ pub.link }}"><strong>{{ pub.paperTitle }}</strong></a>
+        </div>
+        <div>
+          <small>
+            {% for author in pub.authors %} {% assign person = site.data.people
+            | where: "name", author | first -%} {%- if person -%}
+            <strong>{{ author }}</strong>
+            {%- else -%} {{ author }} {%- endif -%} {% unless forloop.last %},
+            {% endunless %} {% endfor %}
+          </small>
+        </div>
+        <div>
+          <small>{{ pub.conference }} {{ pub.year }}</small>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <a href="#page-title" class="back-to-top"
+    >{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }}
+    &uarr;
+  </a>
+</section>
+{% endfor %}

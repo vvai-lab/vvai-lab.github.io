@@ -22,8 +22,9 @@ research_areas:
   <div>
     <h2>Recent Publications</h2>
     <div class="entries-list">
-      {% for post in site.publications %} 
-        {% include archive-single.html type=list %}
+      {% assign sorted_publications = site.publications | sort: 'date' | reverse %}
+      {% for pub in sorted_publications limit:3 %}
+        {% include publication.html pub=pub %}
       {% endfor %}
     </div>
   </div>

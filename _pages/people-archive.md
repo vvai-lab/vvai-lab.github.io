@@ -11,9 +11,9 @@ Please also complete the expression of interest form [https://forms.gle/z3ynVaXr
 <div style="display: flex; flex-wrap: wrap; gap: 1em">
 {% for member in site.data.people %}
 {% if member.alumni != true %}
-<div style="display: flex; flex-direction: column; width: 8.5em;">
+<div style="display: flex; flex-direction: column; width: 8.5em; font-size: 0.8rem">
     <a href="{{ member.personal_url }}">
-    <img src="{{ member.avatar }}" alt="{{ member.name }}" style="width: 8.5em; height: 8.5em; object-fit: cover;">
+    <img src="/assets/images/people/{{ member.avatar }}" alt="{{ member.name }}" style="width: 8.5em; height: 8.5em; object-fit: cover;">
         <div>
         {{ member.name }}
         </div>

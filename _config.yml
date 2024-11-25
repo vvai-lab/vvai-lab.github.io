@@ -77,8 +77,6 @@ collections:
     output: true
     permalink: /:collection/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
 
 defaults:
   # _posts

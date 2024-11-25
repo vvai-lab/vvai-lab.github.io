@@ -17,16 +17,7 @@ Here are some of the projects that we are currently working on.
       <small style="color: #646769">{{ project.start | date: "%B %Y" }} - {% if project.end %}{{ project.end }}{% else %}Present{% endif %}</small>
     </div>
 
-    {% if pi_size > 1 %}
-    <div><strong>PIs:</strong>
-    {% for pi in project.pi %}
-    {% assign pi_index = forloop.index %}
-      {{ pi }}{% if pi_size > pi_index %}, {% endif %}
-    {% endfor %}
-    </div>
-    {% else %}
-    <div><strong>PI:</strong> {{ project.pi }}</div>
-    {% endif %}
+    <small>{{ project.pi | join: ", " }}</small>
     <div>{{ project.description }}</div>
 
 {% endif %}
