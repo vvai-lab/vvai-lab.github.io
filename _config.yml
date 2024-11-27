@@ -98,3 +98,9 @@ defaults:
 
 atom_feed:
   hide: true
+
+# Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-R1TH8S8HB3"
