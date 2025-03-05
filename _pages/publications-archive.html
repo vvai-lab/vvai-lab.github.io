@@ -7,7 +7,7 @@ We published research in various formats, including posters, conferences, and
 journals, focusing on top venues in Visualization, VR/AR, and HCI.
 
 {% assign pubsByYear = site.publications | where_exp: "item", "item.hidden !=
-true" | group_by_exp: 'post', 'post.year' %} {% for year in pubsByYear %}
+true" | group_by_exp: 'post', 'post.year' | sort: 'date' | reverse %} {% for year in pubsByYear %}
 <section id="{{ year.name }}" class="taxonomy__section">
   <h2 class="archive__subtitle">{{ year.name }}</h2>
   <div>
@@ -44,6 +44,9 @@ true" | group_by_exp: 'post', 'post.year' %} {% for year in pubsByYear %}
         <div>
           <small>{{ pub.conference }} {{ pub.year }}</small>
         </div>
+        {% if pub.award %}
+            <div style="color: brown;"><small>{{ pub.award }}</small></div>
+        {% endif %}
       </div>
     </div>
     {% endfor %}

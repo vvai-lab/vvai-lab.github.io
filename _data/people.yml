@@ -6,7 +6,7 @@
 - name: Bhasura Gunawardhana
   avatar: "bhasura_gunawardhana.jpg"
   position: "Research Assistant"
-  personal_url: "https://www.linkedin.com/in/bhasura-gunawardhana/"
+  personal_url: "https://bhasurasuseen.github.io/"
   alumni: false
 - name: Danxuan Liang
   avatar: "danxuan_liang.jpg"
@@ -21,4 +21,15 @@
 - name: Yilin Wang
   avatar: "yilin_wang.jpg"
   position: "Intern (Remote)"
+  personal_url: ""
+  alumni: true
+- name: Zeyu Zhang
+  avatar: "bio-photo.jpg"
+  position: "Intern (Remote)"
+  personal_url: ""
+  alumni: false
+- name: Zhening Zhu
+  avatar: "bio-photo.jpg"
+  position: "Intern (Remote)"
+  personal_url: "https://readymag.website/zheningz/portfolio/"
   alumni: false

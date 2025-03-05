@@ -32,18 +32,16 @@ Please also complete the expression of interest form [https://forms.gle/z3ynVaXr
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
 {% for member in site.data.people %}
 {% if member.alumni %}
-<div style="display: flex; flex-direction: column; align-items: center;">
+<div style="display: flex; flex-direction: column; width: 8.5em; font-size: 0.8rem">
     <a href="{{ member.personal_url }}">
-    <img src="{{ member.avatar }}" alt="{{ member.name }}" style="width: 8.5em; height: 8.5em; object-fit: cover; border-radius: 50%;">
-    </a>
-    <a href="{{ member.personal_url }}">
+    <img src="/assets/images/people/{{ member.avatar }}" alt="{{ member.name }}" style="width: 8.5em; height: 8.5em; object-fit: cover;">
         <div>
         {{ member.name }}
         </div>
     </a>
-    <div>
+    <small>
       {{ member.position }}
-    </div>
+    </small>
 </div>
 {% endif %}
 {% endfor %}
