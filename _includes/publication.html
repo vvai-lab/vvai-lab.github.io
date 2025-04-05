@@ -29,5 +29,8 @@
     <div>
       <small>{{ pub.conference }} {{ pub.year }}</small>
     </div>
+    {% if pub.award %}
+    <div style="color: brown"><small>{{ pub.award }}</small></div>
+    {% endif %}
   </div>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: "Recruit 1-2 PhD students"
+title: "Recruit 1-2 PhD students in Fall 2025"
 date: 2024-11-22
 author: Wai Tong
 ---

@@ -5,7 +5,7 @@
   alumni: false
 - name: Bhasura Gunawardhana
   avatar: "bhasura_gunawardhana.jpg"
-  position: "Research Assistant"
+  position: "PhD Student"
   personal_url: "https://bhasurasuseen.github.io/"
   alumni: false
 - name: Danxuan Liang
@@ -32,4 +32,9 @@
   avatar: "bio-photo.jpg"
   position: "Intern (Remote)"
   personal_url: "https://readymag.website/zheningz/portfolio/"
+  alumni: false
+- name: Tiansu Chen
+  avatar: "tiansu_chen.png"
+  position: "PhD Student"
+  personal_url: "https://tiansuchen.github.io/"
   alumni: false
