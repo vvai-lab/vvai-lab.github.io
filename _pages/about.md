@@ -16,3 +16,8 @@ So VVAI can be pronounced as "WAI" (pronounced as "why") Lab. -->
 ## History
 
 The VVAI Lab was founded by [Dr. Wai Tong](https://wtong2017.github.io/) in 2024 at the [College of Performance, Visualization and Fine Arts](https://pvfa.tamu.edu/) at [Texas A&M University](https://www.tamu.edu/).
+
+## Contact
+For inquiries, please contact us at **wtong at tamu dot edu**.
+We are always open to collaboration and discussion with researchers, industry professionals, and anyone interested in the fields of visualization, AR/VR, and interaction.
+We welcome you to explore our work, engage with us, and join us in pushing the boundaries of what is possible in these exciting domains.
