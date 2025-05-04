@@ -31,9 +31,10 @@
   start_date: 2024 Summer
   alumni: true
 - name: Zeyu Zhang
-  avatar: "bio-photo.jpg"
+  avatar: "zeyu_zhang.jpg"
   position: "Intern (Remote)"
-  personal_url: "Hong Kong University"
+  affliation: "Hong Kong University"
+  personal_url: "https://johnnyzhang728.github.io/"
   start_date: 2025 Spring
   alumni: false
 - name: Zhening Zhu
