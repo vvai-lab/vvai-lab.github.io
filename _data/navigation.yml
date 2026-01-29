@@ -1,11 +1,11 @@
 main:
   - title: "News"
     url: /news/
-  - title: "People"
-    url: /people/
-  - title: "Projects"
-    url: /projects/
+  # - title: "Projects"
+  #   url: /projects/
   - title: "Publications"
     url: /publications/
+  - title: "People"
+    url: /people/
   - title: "About"
     url: /about/
