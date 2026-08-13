@@ -7,52 +7,17 @@
   avatar: "bhasura_gunawardhana.jpg"
   position: "PhD Student"
   personal_url: "https://bhasurasuseen.github.io/"
-  start_date: 2025 Fall
+  start_date: "Fall 2025"
   alumni: false
-- name: Danxuan Liang
-  avatar: "danxuan_liang.jpg"
-  position: "Intern (Remote)"
-  personal_url: "https://oocliooo.notion.site/Clio-s-Webpage-39a50734d5f845e99948f28699ff4ff3"
-  affiliation: "Hong Kong University of Science and Technology"
-  start_date: 2025 Summer
-  alumni: true
-- name: Ke Zhou
-  avatar: "ke_zhou.jpg"
-  position: "Intern (Remote)"
-  personal_url: "https://kezhou1210.github.io/"
-  affiliation: "Chongqing University"
-  start_date: 2024 Summer
-  alumni: true
-- name: Yilin Wang
-  avatar: "yilin_wang.jpg"
-  position: "Intern (Remote)"
-  personal_url: ""
-  affiliation: "Chinese University of Hong Kong, Shenzhen"
-  start_date: 2024 Summer
-  alumni: true
-- name: Zeyu Zhang
-  avatar: "zeyu_zhang.jpg"
-  position: "Intern (Remote)"
-  affiliation: "Hong Kong University"
-  personal_url: "https://johnnyzhang728.github.io/"
-  start_date: 2025 Spring
-  alumni: true
-- name: Zhening Zhu
-  avatar: "zhening_zhu.jpg"
-  position: "Intern (Remote)"
-  personal_url: "https://readymag.website/zheningz/portfolio/me/"
-  affiliation: "Cornell University"
-  start_date: 2025 Spring
-  alumni: true
 - name: Tiansu Chen
   avatar: "tiansu_chen.png"
   position: "PhD Student"
   personal_url: "https://tiansuchen.github.io/"
   alumni: false
-  start_date: 2025 Fall
-- name: Yuxuan Guo
-  avatar: "bio-photo.jpg"
-  position: "Intern (Remote)"
-  personal_url: "https://tiansuchen.github.io/"
-  alumni: true
-  start_date: 2025 Fall
+  start_date: "Fall 2025"
+- name: Zihang Liu
+  avatar: "zihang_liu.jpg"
+  position: "PhD Student"
+  personal_url: "https://liu31913.carrd.co/"
+  alumni: false
+  start_date: "Fall 2026"

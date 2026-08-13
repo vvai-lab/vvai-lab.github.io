@@ -31,6 +31,11 @@ Our lab is a vibrant community of researchers, students, and collaborators dedic
           <small>
             {{ member.position }}
           </small>
+          {% if member.name != "Wai Tong" and member.start_date %}
+          <small>
+            {{ member.start_date }} &ndash; {{ member.end_date | default: "present" }}
+          </small>
+          {% endif %}
       </div>
     {% endif %}
   {% endfor %}
@@ -53,6 +58,11 @@ Our lab is a vibrant community of researchers, students, and collaborators dedic
     <small>
       {{ member.position }}
     </small>
+    {% if member.name != "Wai Tong" and member.start_date %}
+    <small>
+      {{ member.start_date }} &ndash; {{ member.end_date | default: "present" }}
+    </small>
+    {% endif %}
 </div>
 {% endif %}
 {% endfor %}
