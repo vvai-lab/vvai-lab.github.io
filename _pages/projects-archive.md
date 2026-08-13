@@ -3,27 +3,24 @@ title: "Projects"
 permalink: /projects/
 ---
 
-Here are some of the projects that we are currently working on.
+We build spatial, immersive, and cross-device systems that support data analysis,
+collaboration, learning, and creative practice. Select a project to explore its research
+questions, methods, impact, and related publications.
 
-## Active Projects
+## Active research projects
 
-<div>
-{% for project in site.projects %}
-  {% if project.status == "active" %}
-{% assign pi_size = project.pi | size %}
-<div class="card">
-    <div style="display: flex; justify-content: space-between; align-items: center">
-
-    <!-- <a href="{{ project.url }}"> -->
-       <strong>{{ project.title }}</strong>
-    <!-- </a> -->
-      <small style="color: #646769">{{ project.start | date: "%B %Y" }} - {% if project.end %}{{ project.end }}{% else %}Present{% endif %}</small>
+{% assign active_projects = site.projects | where: "status", "active" | sort: "order" %}
+<div class="project-list">
+{% for project in active_projects %}
+  <article class="project-index-card">
+    <div>
+      <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+      <ul class="project-index-card__meta" aria-label="Project metadata">
+        <li>{{ project.related_publications | size }} related publication{% if project.related_publications.size != 1 %}s{% endif %}</li>
+      </ul>
     </div>
-
-    <small>{{ project.pi | join: ", " }}</small>
-    <div>{{ project.description }}</div>
-</div>
-{% endif %}
+    <a class="project-index-card__link" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">View details &rarr;</a>
+  </article>
 
 {% endfor %}
 </div>

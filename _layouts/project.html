@@ -1,0 +1,55 @@
+---
+layout: single
+---
+
+{% assign representative_publication = site.data.publications | where: "id", page.featured_publication | first %}
+{% if page.featured_image %}
+  {% assign representative_image = page.featured_image %}
+{% else %}
+  {% assign representative_image = '/assets/generated/publications/' | append: representative_publication.image %}
+{% endif %}
+
+<a class="project-detail__back" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>
+
+<div class="project-detail">
+  <figure class="project-detail__hero">
+    <img src="{{ representative_image | relative_url }}" alt="Representative image for {{ page.title }}">
+  </figure>
+
+  <p class="project-detail__summary">{{ page.description }}</p>
+
+  <dl class="project-detail__details">
+    <div>
+      <dt>Research question</dt>
+      <dd>{{ page.question }}</dd>
+    </div>
+    <div>
+      <dt>Methods</dt>
+      <dd>{{ page.methods }}</dd>
+    </div>
+    <div>
+      <dt>Impact</dt>
+      <dd>{{ page.impact }}</dd>
+    </div>
+  </dl>
+
+  {% if page.current_application %}
+    <p class="project-detail__application"><strong>Current application:</strong> {{ page.current_application }}</p>
+  {% endif %}
+
+  {% if page.related_publications and page.related_publications != empty %}
+    <section class="project-detail__publications" aria-labelledby="related-publications-title">
+      <h2 id="related-publications-title">Related publications</h2>
+      <div class="publication-list">
+        {% for publication_id in page.related_publications %}
+          {% assign publication = site.data.publications | where: "id", publication_id | first %}
+          {% if publication %}
+            {% include publication.html pub=publication show_actions=true %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+</div>
+
+<script src="{{ '/assets/js/publications.js' | relative_url }}" defer></script>

@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: &labname VVAI Lab
-description: &description Visualization, Virtual Reality, Augmented Reality, and Interaction Lab focuses on the research and development of AR/VR technology and interaction techniques for more efficient and effective visual exploration and analytics.
+description: &description The VVAI Lab studies how people understand data, collaborate across devices, and learn complex skills through spatial and immersive interfaces.
 minimal_mistakes_skin: default
 search: false
 lab_start_year: 2024
@@ -89,6 +89,7 @@ defaults:
       type: posts
     values:
       layout: single
+      classes: wide
       read_time: true
       share: true
       related: true
@@ -99,6 +100,20 @@ defaults:
       type: pages
     values:
       layout: single
+      classes: wide
+  # collection pages
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      classes: wide
+  # root pages, including the homepage
+  - scope:
+      path: ""
+      type: pages
+    values:
+      classes: wide
 
 atom_feed:
   hide: true

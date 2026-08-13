@@ -11,13 +11,55 @@ journals, focusing on top venues in Visualization, VR/AR, and HCI.
   | sort: "date"
   | reverse %}
 {% assign publications_by_year = lab_publications | group_by: "year" %}
+{%- capture publication_categories_string -%}
+  {%- for pub in lab_publications -%}
+    {%- for category in pub.categories -%}{{ category | strip }}|||{%- endfor -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{% assign publication_categories = publication_categories_string | strip | split: "|||" | uniq | sort %}
+{% assign publication_types = lab_publications | map: "type" | uniq | sort %}
+
+<div class="publication-filters" role="search" aria-label="Filter publications">
+  <div class="publication-filter publication-filter--search">
+    <label for="publication-search">Search</label>
+    <input id="publication-search" type="search" placeholder="Title, author, venue, or topic" autocomplete="off">
+  </div>
+  <div class="publication-filter">
+    <label for="publication-year">Year</label>
+    <select id="publication-year">
+      <option value="">All years</option>
+      {% for year in publications_by_year %}<option value="{{ year.name }}">{{ year.name }}</option>{% endfor %}
+    </select>
+  </div>
+  <div class="publication-filter">
+    <label for="publication-topic">Topic</label>
+    <select id="publication-topic">
+      <option value="">All topics</option>
+      {% for category in publication_categories %}
+        {% assign clean_category = category | strip %}
+        {% unless clean_category == "" %}<option value="{{ clean_category | downcase | escape }}">{{ clean_category }}</option>{% endunless %}
+      {% endfor %}
+    </select>
+  </div>
+  <div class="publication-filter">
+    <label for="publication-type">Type</label>
+    <select id="publication-type">
+      <option value="">All types</option>
+      {% for type in publication_types %}<option value="{{ type | downcase | escape }}">{{ type | capitalize }}</option>{% endfor %}
+    </select>
+  </div>
+  <button class="publication-filters__reset" id="publication-reset" type="button">Reset</button>
+  <p class="publication-filters__status" id="publication-results-status" aria-live="polite"></p>
+</div>
+
+<noscript><p class="notice--info">Publication filters and BibTeX copying require JavaScript. All publications remain visible without it.</p></noscript>
 
 {% for year in publications_by_year %}
-<section id="{{ year.name }}" class="taxonomy__section">
+<section id="{{ year.name }}" class="taxonomy__section publication-year" data-publication-year>
   <h2 class="archive__subtitle">{{ year.name }}</h2>
-  <div>
+  <div class="publication-list">
     {% for pub in year.items %}
-      {% include publication.html pub=pub %}
+      {% include publication.html pub=pub show_actions=true %}
     {% endfor %}
   </div>
   <a href="#page-title" class="back-to-top">
@@ -25,3 +67,7 @@ journals, focusing on top venues in Visualization, VR/AR, and HCI.
   </a>
 </section>
 {% endfor %}
+
+<p class="publication-empty-state" id="publication-empty-state" hidden>No publications match those filters.</p>
+
+<script src="{{ '/assets/js/publications.js' | relative_url }}" defer></script>

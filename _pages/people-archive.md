@@ -17,26 +17,20 @@ Our lab is a vibrant community of researchers, students, and collaborators dedic
 {% assign sorted_members = sorted_members | sort: "position" %}
 {% assign sorted_members = sorted_members | sort: "name" %}
 
-<div style="display: flex; flex-wrap: wrap; gap: 1em">
+<div class="people-grid">
 {% for position in position_order %}
   {% for member in sorted_members %}
     {% if member.position == position and member.alumni != true %}
-      <div style="display: flex; flex-direction: column; width: 8.5em; font-size: 0.8rem">
-          <a href="{{ member.personal_url }}">
-          <img src="/assets/images/people/{{ member.avatar }}" alt="{{ member.name }}" style="width: 8.5em; height: 8.5em; object-fit: cover;">
-              <div>
-              {{ member.name }}
-              </div>
-          </a>
-          <small>
-            {{ member.position }}
-          </small>
+      <a class="person-card" href="{{ member.personal_url }}" aria-label="View {{ member.name }}'s profile">
+        <img class="person-card__image" src="{{ '/assets/images/people/' | append: member.avatar | relative_url }}" alt="{{ member.name }}">
+        <div class="person-card__body">
+          <h3 class="person-card__name">{{ member.name }}</h3>
+          <p class="person-card__role">{{ member.position }}</p>
           {% if member.name != "Wai Tong" and member.start_date %}
-          <small>
-            {{ member.start_date }} &ndash; {{ member.end_date | default: "present" }}
-          </small>
+            <p class="person-card__term">{{ member.start_date }} &ndash; {{ member.end_date | default: "present" }}</p>
           {% endif %}
-      </div>
+        </div>
+      </a>
     {% endif %}
   {% endfor %}
 {% endfor %}
@@ -45,25 +39,19 @@ Our lab is a vibrant community of researchers, students, and collaborators dedic
 {% assign alumni_count = site.data.people | where: "alumni", true | size %}
 {% if alumni_count > 0 %}
 ## Alumni
-<div style="display: flex; flex-wrap: wrap; gap: 1em">
+<div class="people-grid">
 {% for member in site.data.people %}
 {% if member.alumni %}
-<div style="display: flex; flex-direction: column; width: 8.5em; font-size: 0.8rem">
-    <a href="{{ member.personal_url }}">
-    <img src="/assets/images/people/{{ member.avatar }}" alt="{{ member.name }}" style="width: 8.5em; height: 8.5em; object-fit: cover;">
-        <div>
-        {{ member.name }}
-        </div>
-    </a>
-    <small>
-      {{ member.position }}
-    </small>
-    {% if member.name != "Wai Tong" and member.start_date %}
-    <small>
-      {{ member.start_date }} &ndash; {{ member.end_date | default: "present" }}
-    </small>
+<a class="person-card person-card--alumni" href="{{ member.personal_url }}" aria-label="View {{ member.name }}'s profile">
+  <img class="person-card__image" src="{{ '/assets/images/people/' | append: member.avatar | relative_url }}" alt="{{ member.name }}">
+  <div class="person-card__body">
+    <h3 class="person-card__name">{{ member.name }}</h3>
+    <p class="person-card__role">{{ member.position }}</p>
+    {% if member.start_date %}
+      <p class="person-card__term">{{ member.start_date }} &ndash; {{ member.end_date | default: "present" }}</p>
     {% endif %}
-</div>
+  </div>
+</a>
 {% endif %}
 {% endfor %}
 </div>

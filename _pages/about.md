@@ -6,7 +6,15 @@ About the **Visualization, Virtual reality, Augmented reality and Interaction (V
 
 ## Mission
 
-At the VVAI Lab, we are passionate about advancing the frontiers of **visualization**, **AR/VR technology**, and **human-computer interaction**. Our mission is to explore and develop cutting-edge interaction techniques and immersive technologies that empower individuals and teams to engage in more efficient and effective visual exploration and analytics.
+The VVAI Lab asks how people can **understand data in context**, **collaborate across
+different devices and viewpoints**, and **learn complex creative skills** when digital
+information becomes spatial and immersive. We build AR/VR, tangible, and cross-device
+systems, then evaluate them through controlled experiments, field studies, interviews,
+and behavioral measures.
+
+Our goal is practical as well as scientific: to turn evidence about human perception,
+interaction, learning, and teamwork into more useful analytics tools, more accessible
+learning environments, and better support for collaborative decision-making.
 
 <!-- ## How to pronounce?
 
