@@ -40,7 +40,7 @@ Our lab is a vibrant community of researchers, students, and collaborators dedic
 {% assign alumni_count = site.data.people | where: "alumni", true | size %}
 {% if alumni_count > 0 %}
 ## Alumni
-<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+<div style="display: flex; flex-wrap: wrap; gap: 1em">
 {% for member in site.data.people %}
 {% if member.alumni %}
 <div style="display: flex; flex-direction: column; width: 8.5em; font-size: 0.8rem">
