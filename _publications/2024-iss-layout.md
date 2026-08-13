@@ -13,6 +13,7 @@ authors:
 - Yalong Yang
 authorsNote:
 link: https://arxiv.org/abs/2408.05105
+doi: 10.1145/3698130
 imgSrc: iss2024.png
 award:
 publication_types:

@@ -15,6 +15,7 @@ authors:
 - Yalong Yang
 authorsNote:
 link:
+doi: 10.1109/TVCG.2025.3538771
 imgSrc: tvcg2025.png
 award:
 publication_types:
