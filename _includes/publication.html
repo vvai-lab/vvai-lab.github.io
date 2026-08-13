@@ -1,3 +1,4 @@
+{% assign pub = include.pub %}
 <div
   style="
     display: grid;
@@ -8,29 +9,40 @@
 >
   <div style="height: 5em">
     <img
-      src="/assets/images/publications/{{ pub.imgSrc }}"
-      alt="{{ pub.paperTitle }}"
+      src="{{ '/assets/generated/publications/' | append: pub.image | relative_url }}"
+      alt="Thumbnail for {{ pub.title }}"
       style="object-fit: cover; height: 100%; min-width: 100%"
     />
   </div>
   <div style="font-size: 0.8rem">
     <div>
-      <a href="{{ pub.link }}"><strong>{{ pub.paperTitle }}</strong></a>
+      {% if pub.url %}
+      <a href="{{ pub.url }}"><strong>{{ pub.title }}</strong></a>
+      {% else %}
+      <strong>{{ pub.title }}</strong>
+      {% endif %}
     </div>
     <div>
       <small>
-        {% for author in pub.authors %} {% assign person = site.data.people |
-        where: "name", author | first -%} {%- if person -%}
-        <strong>{{ author }}</strong>
-        {%- else -%} {{ author }} {%- endif -%} {% unless forloop.last %}, {%
-        endunless %} {% endfor %}
+        {% for author in pub.authors %}
+          {% assign person = site.data.people | where: "name", author | first -%}
+          {%- if person -%}<strong>{{ author }}</strong>{%- else -%}{{ author }}{%- endif -%}
+          {%- if pub.equal_contributors and pub.equal_contributors contains author -%}*{%- endif -%}
+          {%- unless forloop.last %}, {% endunless -%}
+        {% endfor %}
       </small>
     </div>
+    {% if pub.authors_note %}
+    <div><small>{{ pub.authors_note }}</small></div>
+    {% endif %}
     <div>
-      <small>{{ pub.conference }} {{ pub.year }}</small>
+      <small>{{ pub.venue }}, {{ pub.year }}</small>
     </div>
     {% if pub.award %}
     <div style="color: brown"><small>{{ pub.award }}</small></div>
+    {% endif %}
+    {% if pub.note %}
+    <div><small><em>{{ pub.note }}</em></small></div>
     {% endif %}
   </div>
 </div>

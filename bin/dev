@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+site_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+"${site_root}/scripts/sync_publications.rb" --watch &
+sync_pid=$!
+trap 'kill "${sync_pid}" 2>/dev/null || true' EXIT INT TERM
+
+cd "${site_root}"
+if command -v rbenv >/dev/null 2>&1; then
+  rbenv exec bundle exec jekyll serve --livereload "$@"
+else
+  bundle exec jekyll serve --livereload "$@"
+fi

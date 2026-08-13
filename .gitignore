@@ -2,3 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 Gemfile.lock
+
+# Generated from the canonical catalog in wtong2017.github.io
+_data/publications.yml
+assets/generated/publications/

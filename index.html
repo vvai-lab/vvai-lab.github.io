@@ -22,7 +22,10 @@ research_areas:
   <div>
     <h2>Recent Publications</h2>
     <div class="entries-list">
-      {% assign sorted_publications = site.publications | sort: 'date' | reverse %}
+      {% assign sorted_publications = site.data.publications
+        | where_exp: "pub", "pub.year >= site.lab_start_year"
+        | sort: "date"
+        | reverse %}
       {% for pub in sorted_publications limit:3 %}
         {% include publication.html pub=pub %}
       {% endfor %}
