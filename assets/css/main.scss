@@ -65,10 +65,10 @@ h6 {
 
 .project-carousel {
   position: relative;
-  width: 100%;
-  margin: 0 0 3rem;
+  width: auto;
+  margin: 0 calc(50% - 50vw) 3rem;
   overflow: hidden;
-  border-radius: 0.65rem;
+  border-radius: 0;
   background: #220d0b;
   color: #fff;
 }
