@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 -54 640 640" fill="none" role="img" aria-labelledby="vvai-title vvai-description">
+  <title id="vvai-title">VVAI Lab</title>
+  <desc id="vvai-description">VVAI Lab icon: a left-facing V on the top plane, V on the left face, A on the right face, and I at the outer edge.</desc>
+  <path id="top-v" fill="#9A4E58" d="M320.000000 -15.564065 80.000000 123.000000 320.000000 261.564065 363.200000 236.622533 166.400000 123.000000 363.200000 9.377467Z" />
+  <g id="left-face" transform="matrix(.24 .138564065 0 .277128129 80 132)" fill="#500000">
+    <path id="left-v" d="M0 0H180V792.682927L830 0H1000L180 1000H0Z" />
+  </g>
+  <g id="right-face" transform="matrix(.24 -.138564065 0 .277128129 320 270.564065)" fill="#500000">
+    <path id="right-a" fill-rule="evenodd" d="M0 0 800 1000H660L564 880H170V1000H0Z M170 387.5V710H428Z" />
+    <path id="outer-i" d="M850 0H1000V1000H850Z" />
+  </g>
+</svg>
