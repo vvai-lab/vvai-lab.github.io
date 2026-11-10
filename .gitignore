@@ -6,3 +6,5 @@ Gemfile.lock
 # Generated from the canonical catalog in wtong2017.github.io
 _data/publications.yml
 assets/generated/publications/
+
+.DS_Store
